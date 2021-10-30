@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragements.Profile"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background = "@drawable/profilelayout">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circular"
+        android:contentDescription="@string/profilepic"
+        android:src="@drawable/ic_netflix_logo_wine" />
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="181dp"
+        android:contentDescription="@string/to_add_a_profile_pic"
+        android:src="@drawable/ic_baseline_add_24" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="110dp"
+        android:inputType="textPersonName"
+        android:longClickable="true"
+        android:text="@string/name"
+        android:importantForAutofill="no" />
+</RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:fadeScrollbars="true"
+        android:id="@+id/vp2"
+        android:layout_marginTop="155dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:tabGravity="center"
+            app:tabIndicator="@drawable/rounded_shape"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/purple_500"
+            app:tabMode="fixed"/>
+    </androidx.viewpager.widget.ViewPager>
+</FrameLayout>
